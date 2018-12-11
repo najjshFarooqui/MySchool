@@ -54,8 +54,8 @@ public class StudentRegistration extends AppCompatActivity {
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, genderSpinner);
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         gender.setAdapter(genderAdapter);
+        insertButton=(Button)findViewById(R.id.create_button);
         insertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
