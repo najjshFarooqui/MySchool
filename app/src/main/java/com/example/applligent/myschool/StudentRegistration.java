@@ -56,9 +56,12 @@ public class StudentRegistration extends AppCompatActivity {
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         gender.setAdapter(genderAdapter);
         insertButton=(Button)findViewById(R.id.create_button);
+        
+        //when button is pressed
         insertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               //database operation
                 Student student =new Student();
                 student.sName=name.getText().toString();
                 student.sAge=age.getText().toString();
@@ -69,11 +72,18 @@ public class StudentRegistration extends AppCompatActivity {
                 List<Student> students = new ArrayList<>();
                 students.add(student);
                 studentDao.insertAll(students);
+                
+                
 
             }
         });
+          public void printStudents() {
+        List<Student> students =StudentDao.getAll();
+        for (Student student : students) {
+            Log.d("abc123", student.sName);
+}
     }
 }
-        //when Button is pressed
+       
 
 
