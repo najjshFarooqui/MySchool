@@ -7,34 +7,35 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 import java.util.List;
+
 @Dao
 public interface StudentDao {
-        @Query("select * from Student")
-        List<Student> getAll();
+    @Query("select * from Student")
+    List<Student> getAll();
 
-        @Query("select max(sId) from Student limit 1 ")
-        int getMaxId();
+    @Query("select max(sId) from Student limit 1 ")
+    int getMaxId();
 
-        @Query("select * from Student where sId =:sId ")
-        int getUid(int sId);
+    @Query("select * from Student where sId =:sId ")
+    Student get(int sId);
 
-        @Query("Delete from Student where sName= :name ")
-        void deleteMany(List<String> name);
+    @Query("Delete from Student where sId= :sid ")
+    void deleteMany(int sid);
 
-        @Query("SELECT * from Student where sName like :name limit 1")
-        Student findByName(String name);
+    @Query("SELECT * from Student where sName like :name limit 1")
+    Student findByName(String name);
 
-        @Insert
-        void insertAll(List<Student> students);
+    @Insert
+    void insertAll(List<Student> students);
 
-        @Insert
-        void insert(Student product);
+    @Insert
+    void insert(Student product);
 
-        @Update
-        void update(Student product);
+    @Update
+    void update(Student product);
 
-        @Delete
-        void delete(Student product);
-    }
+    @Delete
+    void delete(Student product);
+}
 
 

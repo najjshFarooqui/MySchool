@@ -1,89 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".StudentRegistration">
+<layout>
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registration page"
-        android:layout_centerHorizontal="true"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".StudentRegistrationActivity">
 
-    <EditText
-        android:id="@+id/student_name"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/info"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:hint="name" />
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Registration page" />
 
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="107dp"
-        android:ems="10"
-        android:hint="age"
-        android:inputType="number" />
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:hint="name" />
 
-    <EditText
-        android:id="@+id/student_phone"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
-        android:ems="10"
-        android:hint="phone"
-        android:inputType="phone" />
+        <EditText
+            android:id="@+id/ageField"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="107dp"
+            android:ems="10"
+            android:hint="age"
+            android:inputType="number" />
 
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/student_class"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/age"
-        android:layout_alignStart="@+id/gender"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="98dp"></android.support.v7.widget.AppCompatSpinner>
+        <EditText
+            android:id="@+id/phoneField"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="167dp"
+            android:ems="10"
+            android:hint="phone"
+            android:inputType="phone" />
 
-
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/section"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/student_class"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"
-        android:paddingTop="20dp"></android.support.v7.widget.AppCompatSpinner>
-
-    <android.support.v7.widget.AppCompatSpinner
-
-        android:id="@+id/gender"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section"
-        android:layout_alignEnd="@+id/student_name"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="14dp"
-        android:paddingTop="20dp"></android.support.v7.widget.AppCompatSpinner>
-
-    <Button
-        android:id="@+id/button_insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
-        android:text="update" />
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/standardSpinner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ageField"
+            android:layout_marginTop="105dp" />
 
 
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/sectionSpinner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/standardSpinner"
+            android:layout_marginTop="49dp"
+            android:paddingTop="20dp" />
+
+        <android.support.v7.widget.AppCompatSpinner
+
+            android:id="@+id/genderSpinner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sectionSpinner"
+            android:layout_marginTop="47dp"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/insertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:text="update" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

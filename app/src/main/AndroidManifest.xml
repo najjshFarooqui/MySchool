@@ -3,6 +3,7 @@
     package="com.example.applligent.myschool">
 
     <application
+        android:name=".MySchoolApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudentRegistration"></activity>
+        <activity android:name=".StudentRegistrationActivity" />
+        <activity android:name=".StudentListActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".UpdateStudentActivity"></activity>
     </application>
 
 </manifest>
